@@ -1,0 +1,288 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= GLOBAL ================= */
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #222;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 22px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+  z-index: 100;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.navbar .logo {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.navbar .nav-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* Sticky state */
+.navbar.sticky {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.navbar.sticky .nav-links a {
+  color: #222;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("/hero.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 0 20px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 300;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.hero p {
+  margin-top: 12px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.hero button {
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: rgba(255,255,255,0.25);
+  border: none;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+/* ================= SECTIONS (BASE) ================= */
+.section {
+  min-height: 100vh;
+  padding: 120px 60px;
+  background: #f8f9f9;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================= ABOUT ================= */
+.about {
+  background: #ffffff;
+}
+
+.about h2 {
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.about p {
+  margin-top: 24px;
+  font-size: 18px;
+  max-width: 700px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* ================= SERVICES ================= */
+.services {
+  background: #f7f7f7;
+}
+
+.services h2 {
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.service-card:hover h3 {
+  color: #1f3d3a;
+}
+
+/* ================= CTA ================= */
+.cta {
+  background: linear-gradient(135deg, #1f3d3a, #295f59);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.cta p {
+  margin-top: 18px;
+  font-size: 18px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  margin-top: 32px;
+  padding: 14px 36px;
+  background: white;
+  color: #1f3d3a;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* ================= FADE IN ================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= LINKS & BUTTONS ================= */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 18px 24px;
+  }
+
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .hero button {
+    padding: 10px 24px;
+    font-size: 12px;
+  }
+
+  .section {
+    padding: 80px 24px;
+  }
+
+  .about h2,
+  .services h2,
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .about p,
+  .cta p {
+    font-size: 16px;
+  }
+
+  .service-card {
+    padding: 28px 22px;
+  }
+
+  .cta-btn {
+    padding: 12px 28px;
+    font-size: 12px;
+  }
+}
