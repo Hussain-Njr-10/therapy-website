@@ -1,16 +1,113 @@
-# React + Vite
+# Therapy Website – React Frontend Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive single-page therapy website built using **React** and **plain CSS**, designed to match real-world mental health product requirements and align closely with the assignment content and structure.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## React Compiler
+- **Live Site:** https://YOUR-NETLIFY-LINK.netlify.app  
+- **GitHub Repository:** https://github.com/YOUR-USERNAME/therapy-website  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Project Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project is a therapist landing page focused on clarity, trust, and usability.  
+The website visually represents the same copy, tone, and structure used in the assignment form submission, ensuring strong alignment between **content strategy and frontend implementation**.
+
+The goal was to build a calm, professional UI suitable for a mental health platform without relying on heavy UI or animation libraries.
+
+---
+
+## 🛠️ Tech Stack
+
+- React (Vite)
+- JavaScript (ES6+)
+- HTML5
+- CSS (single global `index.css`)
+- Netlify (deployment)
+
+**No Tailwind. No UI libraries. No animation libraries.**  
+This was a deliberate choice to demonstrate strong frontend fundamentals.
+
+---
+
+## ✨ Features
+
+- Full-screen hero section with primary CTA
+- Sticky navigation bar on scroll
+- Vertically stacked layout (Hero → About → Services → CTA)
+- Smooth fade-in animations using `IntersectionObserver`
+- Fully responsive design (mobile, tablet, desktop)
+- Clean typography and spacing suitable for mental health products
+
+---
+
+## 🎯 Design & UX Decisions
+
+- Used subtle animations to maintain a calm and non-distracting experience
+- Chose `IntersectionObserver` over scroll listeners for better performance
+- Kept a minimal color palette and generous spacing to improve readability
+- Ensured all website copy matches the assignment answers exactly
+
+---
+
+## 🚀 Performance Considerations
+
+- No continuous scroll event listeners
+- Animations trigger only once when elements enter the viewport
+- Minimal DOM manipulation
+- CSS transitions limited to `opacity` and `transform` for smooth rendering
+
+---
+
+## 📱 Responsiveness
+
+- Layout adapts cleanly across screen sizes
+- Text scales down appropriately on mobile devices
+- Services stack vertically on smaller screens
+- Navigation simplifies for mobile view
+
+---
+
+## 📂 Project Structure
+
+src/
+ ├─ components/
+ │   ├─ Navbar.jsx
+ │   ├─ Hero.jsx
+ │   ├─ About.jsx
+ │   ├─ Services.jsx
+ │   └─ CTA.jsx
+ ├─ App.jsx
+ ├─ main.jsx
+ └─ index.css
+
+---
+
+## 📦 Deployment
+
+The project is deployed using **Netlify** with continuous deployment from GitHub.
+
+**Build settings:**
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+---
+
+## 🧩 What This Project Demonstrates
+
+- Strong React fundamentals
+- Clean separation of concerns
+- Attention to UX and performance
+- Ability to convert written requirements into a real UI
+- Practical, real-world frontend development approach
+
+---
+
+## 👤 Author
+
+**Hussain Ahmad**  
+Frontend Developer (React)  
+CSE (AI & ML) Undergraduate
